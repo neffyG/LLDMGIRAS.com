@@ -1,0 +1,153 @@
+/* General Styles */
+body {
+    margin: 0;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    background-color: #f4f4f4;
+}
+
+/* Navbar Styles */
+.navbar {
+    background-color: #769f8d; /* Sage green */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    height: 70px;
+    width: 97.25%; /* Set navbar width to 97.25% */
+    margin: 0 auto; /* Center the navbar */
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 5px; /* Slightly rounded edges */
+}
+
+.navbar h2 {
+    color: white;
+    font-size: 24px;
+    margin: 0;
+    flex-shrink: 0;
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar ul a {
+    margin-left: 0px;
+    font-size: 18px;
+    font-weight: bold;
+    color: white;
+    text-decoration: none;
+    padding: 10px 15px;
+    transition: background-color 0.3s, color 0.3s;
+    flex-shrink: 0;
+}
+
+.navbar ul a:hover {
+    color: #f4f4f4;
+    background-color: #607d6b;
+    border-radius: 5px;
+}
+
+/* Dropdown Menu */
+.dropdown {
+    position: relative;
+    display: inline-block;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+.dropdown-content {
+    display: none; /* Hidden by default */
+    position: absolute;
+    top: 100%; /* Position dropdown below "Etapas" */
+    left: 0;
+    background-color: white; /* White background */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    z-index: 1001;
+    min-width: 150px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    visibility: hidden; /* Prevents the floating white rectangle */
+    opacity: 0; /* Makes it fully invisible */
+    transition: visibility 0s, opacity 0.2s ease-in-out; /* Smooth fade-in/out */
+}
+
+.dropdown:hover .dropdown-content {
+    display: block; /* Show dropdown when hovering over "Etapas" */
+    visibility: visible; /* Make it visible */
+    opacity: 1; /* Fade it in */
+}
+
+.dropdown-content a {
+    color: #769f8d !important; /* Sage green text */
+    background-color: white; /* White background */
+    padding: 10px; /* Remove any unnecessary spacing */
+    display: block;
+    text-decoration: none;
+    font-weight: bold;
+    text-align: left; /* Align text to the left */
+    margin: 0; /* Remove any margins */
+    width: 100%; /* Ensure the clickable area spans the full width */
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.dropdown-content a:hover {
+    background-color: #769f8d; /* Sage green background on hover */
+    color: white !important; /* White text on hover */
+}
+
+.dropdown-content {
+    padding: 0; /* Ensure no extra padding around the box */
+    margin: 0; /* Ensure no margins around the box */
+    border: none; /* Remove potential borders */
+}
+
+/* Fix for Dead Space */
+.dropdown-content li {
+    margin: 0; /* Reset list item margin */
+    padding: 0; /* Reset list item padding */
+}
+
+/* Alignment Fixes */
+.navbar ul {
+    justify-content: flex-start; /* Align items to the left */
+}
+
+.main {
+    margin-top: 100px;
+    padding: 20px;
+    text-align: center;
+}
+
+h1 {
+    font-size: 36px;
+    text-transform: uppercase;
+    color: #333;
+}
+
+p {
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+a {
+    text-decoration: none;
+    color: #769f8d;
+    font-weight: bold;
+}
+
+a:hover {
+    color: #607d6b;
+}

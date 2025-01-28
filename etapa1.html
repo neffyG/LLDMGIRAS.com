@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Etapa 1 - Giras Universales</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Inline modernized styles for headers and sections */
+        .section-header {
+            font-size: 26px;
+            font-weight: bold;
+            color: #555;
+            text-align: center;
+            margin: 40px 0 10px;
+            position: relative;
+        }
+
+        .section-header::after {
+            content: '';
+            display: block;
+            width: 60px;
+            height: 4px;
+            background-color: #769f8d;
+            margin: 10px auto;
+        }
+
+        .section-body {
+            font-size: 18px;
+            color: #666;
+            line-height: 1.8;
+            margin: 20px 0;
+            text-align: justify;
+        }
+
+        .image-gallery {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+            margin-top: 30px;
+        }
+
+        .image-gallery img {
+            max-width: 30%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease;
+        }
+
+        .image-gallery img:hover {
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <a href="index.html"><h2>Libreria De Giras</h2></a>
+        <nav>
+            <ul>
+                <a href="index.html"><li>Home</li></a>
+                <li class="dropdown">
+                    <span>Etapas</span>
+                    <ul class="dropdown-content">
+                        <a href="etapa1.html"><li>Etapa 1</li></a>
+                        <a href="etapa2.html"><li>Etapa 2</li></a>
+                        <a href="etapa3.html"><li>Etapa 3</li></a>
+                        <a href="etapa4.html"><li>Etapa 4</li></a>
+                        <a href="etapa5.html"><li>Etapa 5</li></a>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </div>
+
+    <div class="main">
+        <h1 class="section-header">Etapa 1</h1>
+        <p class="section-body">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus luctus eros aliquet nunc vehicula, quis viverra lorem tristique.</p>
+
+        <div>
+            <h2 class="section-header">Section 1</h2>
+            <p class="section-body">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iste itaque nam officiis illo dolore, porro natus ducimus voluptas nulla eaque molestias omnis, non necessitatibus quisquam delectus fugiat? Nobis, provident saepe!</p>
+        </div>
+
+        <div>
+            <h2 class="section-header">Section 2</h2>
+            <p class="section-body">Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae fuga incidunt modi impedit. Eaque, dolorem? Sed voluptatem rem repellat quam! Nobis, quos vitae sit aliquid optio eos impedit quis rem?</p>
+        </div>
+
+        <div>
+            <h2 class="section-header">Section 3</h2>
+            <p class="section-body">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi, laborum. In maiores ut voluptatem excepturi sunt quis adipisci deleniti corrupti ex. Quam, quis? Maiores id saepe cumque similique cum eveniet.</p>
+        </div>
+
+        <div class="image-gallery">
+            <img src="etapa1-image1.jpg" alt="Etapa 1 Image 1">
+            <img src="etapa1-image2.jpg" alt="Etapa 1 Image 2">
+            <img src="etapa1-image3.jpg" alt="Etapa 1 Image 3">
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Giras Universales</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Navbar Styling */
+        .navbar {
+            position: fixed;
+            top: 0;
+            width: 97.25%;
+            background: #769f8d(0, 0, 0, 0.2);
+            color: white;
+            padding: 10px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 10;
+        }
+
+        .navbar .logo-container {
+            display: flex;
+            align-items: center;
+        }
+
+        .navbar .logo-container img {
+            width: 50px; /* Adjust logo size */
+            height: auto;
+            margin-right: 10px; /* Space between logo and text */
+            border-radius: 50%; /* Makes the logo circular */
+            background: white; /* Adds a white background for contrast */
+            padding: 2px;
+        }
+
+        .navbar .logo-container span {
+            color: white;
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .navbar .nav-links {
+            margin-left: auto; /* Push navigation links to the right */
+            display: flex;
+            gap: 20px;
+        }
+
+        .navbar .nav-links a {
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+        }
+
+        .navbar .nav-links a:hover {
+            text-decoration: underline;
+        }
+
+
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            margin-left: 20px;
+            font-size: 18px;
+        }
+
+        .navbar a:hover {
+            text-decoration: underline;
+        }
+
+        /* Slideshow Styling */
+        .slideshow {
+            position: relative;
+            width: 100%;
+            height: 100vh;
+            margin-top: 80px; /* Pushes the slideshow below the navbar */
+            overflow: hidden;
+        }
+
+        /* Logo Section Styling */
+        .logo-section {
+            position: absolute;
+            bottom: -175px; /* Adjust the distance from the bottom */
+            left: 50%; /* Centers the logo horizontally */
+            transform: translateX(-50%); /* Ensures proper centering */
+            z-index: 20; /* Places it above the slideshow images */
+            text-align: center;
+        }
+
+        .logo-section img {
+            width: 200px; /* Adjust logo size */
+            height: auto;
+            border-radius: 50%; /* Makes the logo circular */
+            background: white; /* Adds a white background for contrast */
+            padding: 5px; /* Adds padding around the logo */
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3); /* Adds a shadow for emphasis */
+        }
+
+        .slideshow img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            position: absolute;
+            top: 0;
+            left: 100%;
+            transition: transform 1s ease-in-out;
+        }
+
+        .slideshow img.active {
+            transform: translateX(-100%);
+        }
+
+        .slideshow img.next {
+            transform: translateX(0);
+            left: 0;
+        }
+
+        /* Cards Styling */
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            padding: 40px 20px;
+            margin: 50px auto;
+            max-width: 1200px;
+        }
+
+        .card {
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .card h3 {
+            margin: 15px;
+            font-size: 24px;
+            color: #769f8d;
+        }
+
+        .card p {
+            margin: 15px;
+            color: #555;
+            line-height: 1.6;
+        }
+
+        .card a {
+            display: block;
+            margin: 15px;
+            text-decoration: none;
+            color: #769f8d;
+            font-weight: bold;
+            text-align: right;
+        }
+
+        .card a:hover {
+            color: #607d6b;
+        }
+
+        footer {
+            background-color: #769f8d;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 40px;
+        }
+
+        footer p {
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <!-- Navbar -->
+    <div class="navbar">
+        <div class="logo-container">
+            <img src="logo.jpg" alt="NJG Logo">
+            <span>Giras Universales</span>
+        </div>
+        <div class="nav-links">
+            <a href="#">Home</a>
+            <a href="#etapas">Etapas</a>
+            <a href="#contact">Contact</a>
+        </div>
+    </div>
+
+    <!--logo -->
+    <div class="logo-section">
+        <img src="logo.jpg" alt="NJG Logo">
+    </div>
+
+    <!-- Slideshow Section -->
+    <div class="slideshow" id="slideshow">
+        <img src="mell1.png" alt="Slide 1" class="next">
+        <img src="syd1.jpg" alt="Slide 2">
+        <img src="maui2.png" alt="Slide 3">
+        <img src="hon1.jpg" alt="Slide 4">
+        <img src="hon3.jpg" alt="Slide 6">
+        <img src="maui1.png" alt="Slide 7">
+        <img src="maui3.png" alt="Slide 8">
+        <img src="mell2.png" alt="Slide 9">
+        <img src="mell3.png" alt="Slide 10">
+        <img src="syd2.jpg" alt="Slide 11">
+        <img src="syd3.jpg" alt="Slide 12">
+    </div>
+
+    <!-- Cards Section -->
+    <div class="cards" id="etapas">
+        <div class="card">
+            <h3>Etapa 1</h3>
+            <p>Discover the beginning of the journey, focusing on faith and its foundations. Start exploring today.</p>
+            <a href="etapa1.html">Read More</a>
+        </div>
+        <div class="card">
+            <h3>Etapa 2</h3>
+            <p>Dive deeper into the connection between spiritual and cultural milestones in this stage.</p>
+            <a href="etapa2.html">Read More</a>
+        </div>
+        <div class="card">
+            <h3>Etapa 3</h3>
+            <p>Unveil the challenges and victories as faith grows stronger.</p>
+            <a href="etapa3.html">Read More</a>
+        </div>
+        <div class="card">
+            <h3>Etapa 4</h3>
+            <p>Celebrate the culmination of unity and love through this transformative phase.</p>
+            <a href="etapa4.html">Read More</a>
+        </div>
+        <div class="card">
+            <h3>Etapa 5</h3>
+            <p>Reflect on the achievements of faith and the promises of the future.</p>
+            <a href="etapa5.html">Read More</a>
+        </div>
+    </div>
+
+    <!-- Footer Section -->
+    <footer id="contact">
+        <p>&copy; 2025 Giras Universales Project.</p>
+        <br>
+        <p>&copy; Neftali Garcia</p>
+        
+    </footer>
+
+    <script>
+        const images = document.querySelectorAll('.slideshow img');
+        let currentIndex = 0;
+
+        function showNextSlide() {
+            const currentImage = images[currentIndex];
+            const nextIndex = (currentIndex + 1) % images.length;
+            const nextImage = images[nextIndex];
+
+            currentImage.classList.remove('active');
+            currentImage.classList.remove('next');
+            nextImage.classList.add('next');
+            currentIndex = nextIndex;
+        }
+
+        setInterval(showNextSlide, 4000);
+    </script>
+</body>
+</html>
